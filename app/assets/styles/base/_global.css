@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+  font-weight: 900;
+  color: #2f2f2f;
+  cursor: pointer;
+  transition: 0.5s all ease;
+}
+a:visited {
+  color: #fff;
+}
+h1 {
+  margin: 0;
+  text-transform: uppercase;
+}
+a::after {
+  content: "";
+  display: block;
+  position: relative;
+
+  width: 0%;
+  height: 2px;
+  background: #fff;
+}
+a:hover {
+  font-size: 1.1em;
+  transition: 1s all ease;
+}

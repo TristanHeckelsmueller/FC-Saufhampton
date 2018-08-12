@@ -1,0 +1,41 @@
+.main {
+  width: 90%;
+  background: url(../../assets/images/background/snzr_paar.jpg);
+  background-size: cover;
+  background-position-x: 65%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  @mixin atLarge {
+    width: 95%;
+  }
+  & a {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    color: #fff;
+  }
+  &__title {
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.76);
+    color: #fff;
+    margin-top: 50%;
+    @mixin atSmall {
+      margin-left: 5%;
+    }
+    @mixin atLarge {
+      margin-left: 25px;
+      margin-top: 250px;
+      padding: 50px;
+    }
+    & h1 {
+      font-weight: 100;
+      @mixin atSmall {
+        font-size: 50px;
+      }
+      @mixin atLarge {
+        font-size: 96px;
+      }
+    }
+  }
+}

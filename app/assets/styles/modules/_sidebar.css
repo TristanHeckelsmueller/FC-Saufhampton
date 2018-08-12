@@ -1,0 +1,48 @@
+.sidebar {
+  width: 15%;
+  height: 100vh;
+  transition: 1s all ease;
+  @mixin atSmall {
+    width: 8%;
+  }
+  @mixin atLarge {
+    width: 5%;
+  }
+}
+body {
+  display: flex;
+}
+
+.sidebar--open {
+  width: 50%;
+  transition: 1s all ease;
+  @mixin atSmall {
+    width: 35%;
+  }
+  @mixin atLarge {
+    width: 20%;
+  }
+}
+
+.sidebar__menu {
+  /* visibility: hidden; */
+  transition: 1s all ease;
+  color: #fff;
+  padding: 0.5em;
+  @mixin atLarge {
+    padding: 1em;
+  }
+  & a {
+    transition: 0.5s all ease;
+    color: #fff;
+  }
+}
+.sidebar__menu--visible {
+  /* visibility: visible !important; */
+  transition: 1s all ease;
+  color: #2f2f2f;
+  & a {
+    transition: 0.5s all ease;
+    color: #2f2f2f;
+  }
+}
