@@ -6,14 +6,24 @@
   display: flex;
   align-items: center;
   overflow: hidden;
+  @mixin atSmall {
+    width: 92%;
+  }
   @mixin atLarge {
+    width: 93%;
+  }
+  @mixin atLargest {
     width: 95%;
   }
   & a {
     position: absolute;
-    top: 25px;
-    right: 25px;
     color: #fff;
+    top: 10px;
+    right: 10px;
+    @mixin atSmall {
+      top: 25px;
+      right: 25px;
+    }
   }
   &__title {
     padding: 30px;

@@ -60,62 +60,11 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _Menu = __webpack_require__(1);
-
-var _Menu2 = _interopRequireDefault(_Menu);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var menu = new _Menu2.default();
-
-console.log("Start");
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _jquery = __webpack_require__(2);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Menu = function Menu() {
-  _classCallCheck(this, Menu);
-
-  var sidebar = (0, _jquery2.default)(".sidebar");
-  var sidebar_menu = (0, _jquery2.default)(".sidebar__menu");
-  console.log("Sidebar");
-
-  sidebar.click(function () {
-    sidebar.toggleClass("sidebar--open");
-    sidebar_menu.toggleClass("sidebar__menu--visible");
-  });
-};
-
-exports.default = Menu;
-
-/***/ }),
-/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10373,6 +10322,94 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _Menu = __webpack_require__(2);
+
+var _Menu2 = _interopRequireDefault(_Menu);
+
+var _Shop = __webpack_require__(3);
+
+var _Shop2 = _interopRequireDefault(_Shop);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var menu = new _Menu2.default();
+var shop = new _Shop2.default();
+
+console.log("Start");
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Menu = function Menu() {
+  _classCallCheck(this, Menu);
+
+  var sidebar = (0, _jquery2.default)(".sidebar");
+  var sidebar_menu = (0, _jquery2.default)(".sidebar__menu");
+  var hamburger = (0, _jquery2.default)(".hamburger");
+
+  hamburger.click(function () {
+    sidebar.toggleClass("sidebar--open");
+    sidebar_menu.toggleClass("sidebar__menu--visible");
+  });
+};
+
+exports.default = Menu;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Shop = function Shop() {
+  _classCallCheck(this, Shop);
+
+  var product_info = (0, _jquery2.default)(".shop__product__info");
+  var product = (0, _jquery2.default)(".shop__product");
+
+  product.hover(function () {
+    product_info.toggleClass("shop__product__info--visible");
+  });
+};
+
+exports.default = Shop;
 
 /***/ })
 /******/ ]);

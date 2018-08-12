@@ -4,9 +4,9 @@ class Menu {
   constructor() {
     let sidebar = $(".sidebar");
     let sidebar_menu = $(".sidebar__menu");
-    console.log("Sidebar");
+    let hamburger = $(".hamburger");
 
-    sidebar.click(function() {
+    hamburger.click(function() {
       sidebar.toggleClass("sidebar--open");
       sidebar_menu.toggleClass("sidebar__menu--visible");
     });

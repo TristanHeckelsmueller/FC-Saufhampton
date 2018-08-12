@@ -1,0 +1,39 @@
+.shop {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  @mixin atSmall {
+    width: 92%;
+  }
+  @mixin atLarge {
+    width: 93%;
+  }
+  @mixin atLargest {
+    width: 95%;
+  }
+  &__product {
+    padding: 1em;
+    &__img {
+      widht: 200px;
+      height: 200px;
+      @mixin atLarge {
+        width: 415px;
+        height: 415px;
+      }
+      @mixin atLargest {
+        width: 500px;
+        height: 500px;
+      }
+    }
+    &__info {
+      color: #fff;
+      transition: 1s all ease;
+      &--visible {
+        color: #2f2f2f;
+        transition: 1s all ease;
+      }
+    }
+  }
+}
